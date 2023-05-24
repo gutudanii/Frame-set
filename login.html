@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="login.css" />
+  <title></title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+      <div class="signup"><a id="log" style="font-weight:bold;" href="signup.html">Sign Up</a></div>
+      <div class="login"><a id="log" style="color: #800000; text-decoration: underline;" href="login.html">LogIn</a></div>
+
+      <div class="login-form">
+        <form name="logform" onsubmit="return validateForm()" action="index.html">
+          <input id="email" name="email" type="text" placeholder="Email" class="input" required>
+          <br />
+          <input id="password" name="password" type="password" placeholder="Password" class="input" required>
+          <br />
+          <input class="btn" type="submit" value="LOGIN">
+          <p id="pp_2" style="color:red; font-size: 12px;"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    function validateForm() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (!email.match(emailRegex)) {
+        alert("Invalid email format");
+        return false;
+      }
+
+
+      else if (password.length < 6) {
+        document.getElementById("pp_2").textContent = "Password must be at least 6 characters long";
+        return false;
+          // Check predefined email and password
+      var predefinedEmail = "gutu@gmail.com";
+      var predefinedPassword = "password";
+      if (email === predefinedEmail && password === predefinedPassword) {
+        return true;
+      } else {
+        // documen.getElementById("pp_2").innerHTML = "Invalid email or password";
+        alert("Invalid email or password");
+        return false;
+      }
+      }
+      
+    
+    }
+  </script>
+</body>
+
+</html>

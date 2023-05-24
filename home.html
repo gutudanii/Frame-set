@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>sidebar</title>
+    <style>
+        .box{
+    background-image: url('gutu.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 90px;
+    /* background-color: white; */
+    height: 580px;
+    width: 100%;
+    display: inline-flex;
+  }
+  .text{
+  margin-top: 200px;
+  padding-left: 650px;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.p1{
+  color: blue;
+  font-weight: bolder;
+  font-size: 17px;
+  font-family: monospace;
+  margin-left: 0px;
+}
+.p2{
+  color: black;
+  font-weight: bolder;
+  font-size: 45px;
+  font-family: serif;
+  display: inline-block;
+
+  overflow: hidden; /* Ensures text doesn't overflow container */
+  white-space: nowrap; /* Prevents line breaks */
+  border-right: 0.15em solid black  ; /* Creates the blinking cursor effect */
+  animation: typing 3s steps(10, end), backspace 2s steps(10, end) 3s;
+  /* animation-iteration-count: infinite; */
+  /* animation shorthand property for typing and backspacing animations */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes backspace {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.p3{
+  color: blue;
+  font-size: 18px;
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+.cv{
+  text-decoration: none;
+  background-color: #0099FF;
+  /* background-color: blue; */
+  color: white;
+  /* margin: 50px; */
+  padding: 20px 60px 20px 60px;
+  border-radius: 100px;
+}
+.cv:hover {
+  background-color: #E8E8E8;
+  /* color: blue; */
+  color: #0099FF;
+  font-weight: bold;
+  border-radius: 50px;
+  border-bottom: 5px solid #0099FF;
+  border-top: 1px solid blue;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+  transition-duration: 1s;
+  /* transition-delay: 1s; */
+}
+    </style>
+</head>
+<body>
+    <div id="home" class="box">
+        <div class="text">
+        <p class="p1" >Hello!</p>
+        <br>
+        <p id="pp2" style="margin-bottom:20px;" class="p2" >I'm Gutu Daniel</p>
+        <br>
+        <p class="p3" >I'm Mattu University student, <br>studying Bsc Computer Science <br> since 2021 GC.</p>
+        <br>
+        <div class="button1" >
+          <a target="_blank" class="cv" href="https://www.linkedin.com/in/gutu-daniel/"> Download CV</a>
+          <br>
+        </div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
